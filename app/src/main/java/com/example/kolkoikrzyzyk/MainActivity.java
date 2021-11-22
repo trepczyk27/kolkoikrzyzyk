@@ -19,6 +19,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private int gracz2punkt;
     private TextView Gracz1;
     private TextView Gracz2;
+
     String wygrany ="";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,13 +60,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         if (sprawdz_Wygrana()) {
             if (gracz1ruch) {
                 garcz1wygrana();
-                wygrany="wczesniej wygral gracz 1";
+                wygrany=" wygral gracz 1";
             } else {
                 gracz2wygrana();
-                wygrany="wczesnije wygral gracz 2";
+                wygrany=" wygral gracz 2";
 
-                editor.putString("win",wygrany);
-                editor.commit();
+
             }
             editor.putString("win",wygrany);
             editor.commit();
@@ -74,6 +74,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             wygrany="remis";
             editor.putString("win",wygrany);
             editor.commit();
+
         } else {
             gracz1ruch = !gracz1ruch;
         }
@@ -116,16 +117,22 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Toast.makeText(this, "Gracz 1 wygrywa!", Toast.LENGTH_SHORT).show();
         wyniki_Gry();
         reset_tablicy();
+        editor.putString("win",wygrany);
+        editor.commit();
     }
     private void gracz2wygrana() {
         gracz2punkt++;
         Toast.makeText(this, "Gracz 2  wygrywa!", Toast.LENGTH_SHORT).show();
         wyniki_Gry();
         reset_tablicy();
+        editor.putString("win",wygrany);
+        editor.commit();
     }
     private void Remis() {
         Toast.makeText(this, "Remis!", Toast.LENGTH_SHORT).show();
         reset_tablicy();
+        editor.putString("win",wygrany);
+        editor.commit();
     }
     private void wyniki_Gry() {
         Gracz1.setText("Gracz 1: " + gracz1punkt);
@@ -138,7 +145,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
         }
         liczbaRund = 0;
-        gracz1ruch = true;
     }
     private void reset_Gry() {
         gracz1punkt = 0;
@@ -153,6 +159,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         outState.putInt("gracz1punkt", gracz1punkt);
         outState.putInt("gracz2punkt", gracz2punkt);
         outState.putBoolean("gracz1ruch", gracz1ruch);
+
     }
 
     protected void onRestoreInstanceState(Bundle savedInstanceState) {
@@ -161,5 +168,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         gracz1punkt = savedInstanceState.getInt("gracz1punkt");
         gracz2punkt = savedInstanceState.getInt("gracz2punkt");
         gracz1ruch = savedInstanceState.getBoolean("gracz1ruch");
+
+
+
     }
 }
