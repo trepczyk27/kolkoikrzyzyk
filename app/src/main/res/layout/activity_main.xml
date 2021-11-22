@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/blue">
+
+
+
+    <TextView
+        android:id="@+id/wynik_Gracz1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Gracz 1: 0"
+        android:textColor="@color/black"
+        android:textSize="30sp" />
+    <TextView
+        android:id="@+id/wynik_Gracz2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/wynik_Gracz1"
+        android:text="Gracz 2: 0"
+        android:textColor="@color/black"
+        android:textSize="30sp" />
+
+    <Button
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:backgroundTint="@color/blue2"
+        android:text=""
+        android:textSize="50dp"
+        android:layout_above="@id/button_11"
+        android:layout_toLeftOf="@id/button_11"
+        android:id="@+id/button_00"
+
+        />
+    <Button
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:text=""
+        android:backgroundTint="@color/blue2"
+        android:textSize="50dp"
+        android:layout_above="@id/button_11"
+        android:layout_alignLeft="@id/button_11"
+        android:id="@+id/button_01"
+
+        />
+    <Button
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:text=""
+        android:textSize="50dp"
+        android:layout_above="@id/button_11"
+        android:layout_toRightOf="@id/button_11"
+        android:id="@+id/button_02"
+        android:backgroundTint="@color/blue2"
+        />
+    <Button
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:text=""
+        android:textSize="50dp"
+        android:layout_alignBottom="@id/button_11"
+        android:layout_toLeftOf="@id/button_11"
+        android:id="@+id/button_10"
+        android:backgroundTint="@color/blue2"
+        />
+    <Button
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:text=""
+        android:textSize="50dp"
+        android:id="@+id/button_11"
+        android:layout_marginHorizontal="10dp"
+        android:layout_centerInParent="true"
+        android:backgroundTint="@color/blue2"
+        />
+    <Button
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:text=""
+        android:textSize="50dp"
+        android:layout_alignBottom="@id/button_11"
+        android:layout_toRightOf="@id/button_11"
+        android:id="@+id/button_12"
+        android:backgroundTint="@color/blue2"
+        />
+    <Button
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:text=""
+        android:textSize="50dp"
+        android:layout_below="@id/button_11"
+        android:layout_toLeftOf="@id/button_11"
+        android:backgroundTint="@color/blue2"
+        android:id="@+id/button_20" />
+    <Button
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:text=""
+        android:textSize="50dp"
+        android:layout_below="@id/button_11"
+        android:layout_alignLeft="@id/button_11"
+        android:id="@+id/button_21"
+        android:backgroundTint="@color/blue2"
+        />
+    <Button
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:text=""
+        android:textSize="50dp"
+        android:layout_below="@id/button_11"
+        android:layout_toRightOf="@id/button_11"
+        android:id="@+id/button_22"
+        android:backgroundTint="@color/blue2"
+
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button_reset"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:layout_margin="60dp"
+        android:text="Nowa Gra"
+        android:textColor="@color/black"
+        android:backgroundTint="@color/blue2"
+        />
+</RelativeLayout>
